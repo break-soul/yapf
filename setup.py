@@ -50,6 +50,9 @@ with codecs.open('README.rst', 'r', 'utf-8') as fd:
       maintainer='Bill Wendling',
       maintainer_email='morbo@google.com',
       packages=find_packages('.'),
+      project_urls={
+          'Source': 'https://github.com/google/yapf',
+      },
       classifiers=[
           'Development Status :: 4 - Beta',
           'Environment :: Console',
@@ -61,6 +64,10 @@ with codecs.open('README.rst', 'r', 'utf-8') as fd:
           'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
           'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Programming Language :: Python :: 3.9',
+          'Programming Language :: Python :: 3.10',
           'Topic :: Software Development :: Libraries :: Python Modules',
           'Topic :: Software Development :: Quality Assurance',
       ],
@@ -72,5 +79,8 @@ with codecs.open('README.rst', 'r', 'utf-8') as fd:
       },
       cmdclass={
           'test': RunTests,
+      },
+      extras_require={
+          'pyproject': ['tomli'],
       },
   )
